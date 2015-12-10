@@ -41,8 +41,6 @@ void stopTimer() {
 
 void loop() {
 
-    buttonState = digitalRead(button);
-
     int willekeurig = random() % 15 + 1;
     antwoord = willekeurig;
 
@@ -67,8 +65,14 @@ void loop() {
         willekeurig -= 1;
     }
 
+    // Start the timer
     startTimer();
+
+    // Loop until the timer endsd
     while (!isTimerFinished()) {
+        // Update the current button state each loop
+        buttonState = digitalRead(button);
+
         if (buttonState != lastButtonState) {
             counter++;
             startTimer();
