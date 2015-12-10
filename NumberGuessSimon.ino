@@ -84,6 +84,8 @@ void loop() {
         }
     }
 
+    // Stop the timer, since it's no longer needed
+    stopTimer();
 
     if (counter >= antwoord) {
         digitalWrite(13, HIGH);
@@ -104,5 +106,4 @@ void loop() {
     delay(500);
 
     counter = 0;
-    stopTimer();
 }
