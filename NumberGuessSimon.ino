@@ -9,7 +9,7 @@ int buttonState = LOW;
 int lastButtonState = LOW;
 int counter = 0;
 
-int TIMER_TIMEOUT = 2000;
+int timerTimeout = 2000;
 long timer = -2;
 
 int antwoord;
@@ -28,7 +28,7 @@ void setup() {
 }
 
 void startTimer() {
-    timer = millis() + TIMER_TIMEOUT;
+    timer = millis() + timerTimeout;
 }
 
 bool isTimerFinished() {
