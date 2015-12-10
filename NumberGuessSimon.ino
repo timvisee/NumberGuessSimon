@@ -10,7 +10,7 @@ int lastButtonState = LOW;
 int counter = 0;
 
 int timerTimeout = 2000;
-long timer = -2;
+long timer = -1;
 
 int antwoord;
 
@@ -36,7 +36,7 @@ bool isTimerFinished() {
 }
 
 void stopTimer() {
-    timer = -2;
+    timer = -1;
 }
 
 void loop() {
