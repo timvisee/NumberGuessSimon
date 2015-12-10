@@ -5,8 +5,8 @@ int led4 = 11;
 int led5 = 13;
 
 int button = 4;
-int buttonState = 0;
-int lastButtonState = 0;
+int buttonState = LOW;
+int lastButtonState = LOW;
 int counter = 0;
 
 int TIMER_TIMEOUT = 2000;
