@@ -68,7 +68,7 @@ void loop() {
     // Start the timer
     startTimer();
 
-    // Loop until the timer endsd
+    // Loop until the timer ends
     while (!isTimerFinished()) {
         // Update the current button state each loop
         buttonState = digitalRead(button);
@@ -95,7 +95,6 @@ void loop() {
         digitalWrite(11, LOW);
         delay(5000);
     }
-
 
     digitalWrite(13, LOW);
     digitalWrite(8, LOW);
