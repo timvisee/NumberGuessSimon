@@ -73,11 +73,15 @@ void loop() {
         // Update the current button state each loop
         buttonState = digitalRead(button);
 
-        if (buttonState != lastButtonState) {
+        if (buttonState == HIGH && lastButtonState == LOW) {
             counter++;
             startTimer();
+            lastButtonState = HIGH;
+
+        } else if(buttonState == LOW && lastButtonState == HIGH) {
+            lastButtonState = LOW;
+            startTimer();
         }
-        lastButtonState = buttonState;
     }
 
 
