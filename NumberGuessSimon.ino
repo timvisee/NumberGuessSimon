@@ -21,7 +21,7 @@ int antwoord;
 
 // Called on setup
 void setup() {
-    // Set up led's
+    // Set up leds
     pinMode(led1, OUTPUT);
     pinMode(led2, OUTPUT);
     pinMode(led3, OUTPUT);
